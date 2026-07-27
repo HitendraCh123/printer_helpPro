@@ -1,0 +1,98 @@
+.page-hero {
+  padding: 64px 0 48px;
+  background: linear-gradient(160deg, #eef5ff 0%, #f8faff 100%);
+  position: relative; overflow: hidden;
+}
+.page-hero-orb {
+  position: absolute; width: 400px; height: 400px;
+  border-radius: 50%; background: rgba(59,130,246,0.1);
+  filter: blur(80px); top: -100px; right: -80px; pointer-events: none;
+}
+.page-title { font-size: clamp(2rem, 3.8vw, 2.8rem); font-weight: 800; margin-top: 16px; }
+.page-sub { margin-top: 14px; color: var(--muted); max-width: 560px; font-size: 1.05rem; line-height: 1.7; }
+
+.section { padding: 64px 0; }
+.support-layout { display: grid; grid-template-columns: 0.9fr 1.1fr; gap: 44px; align-items: start; }
+
+.sidebar-heading { font-size: 1.4rem; font-weight: 800; margin-bottom: 10px; }
+.sidebar-sub { color: var(--muted); font-size: 0.94rem; margin-bottom: 28px; line-height: 1.65; }
+
+.contact-cards { display: flex; flex-direction: column; gap: 14px; }
+.contact-card {
+  background: var(--white); border: 1.5px solid var(--steel);
+  border-radius: var(--radius); padding: 20px 22px;
+  display: flex; align-items: flex-start; gap: 16px;
+  transition: all 0.2s ease;
+}
+a.contact-card:hover {
+  box-shadow: var(--shadow-card-hover); transform: translateY(-2px);
+  border-color: var(--signal-bright);
+}
+.contact-card-primary {
+  background: linear-gradient(135deg, var(--ink) 0%, #1a3a72 100%);
+  border-color: transparent; color: white;
+}
+.contact-card-primary h3 { color: white; }
+.contact-card-primary p { color: rgba(255,255,255,0.8); }
+.contact-card-primary:hover { transform: translateY(-2px); box-shadow: 0 12px 28px rgba(6,16,42,0.3); }
+.contact-card-icon {
+  width: 44px; height: 44px; border-radius: 11px;
+  background: var(--steel); color: var(--signal);
+  display: flex; align-items: center; justify-content: center; flex-shrink: 0;
+}
+.phone-icon { background: rgba(255,255,255,0.15); color: white; }
+.contact-card h3 { font-size: 0.92rem; margin-bottom: 5px; font-weight: 700; }
+.contact-card p { font-size: 0.88rem; color: var(--muted); }
+.avail-badge {
+  display: inline-flex; align-items: center; gap: 5px;
+  background: rgba(16,185,129,0.15); color: var(--success);
+  border-radius: 999px; padding: 3px 10px;
+  font-size: 0.74rem; font-weight: 600; margin-top: 6px;
+}
+.avail-dot { width: 5px; height: 5px; border-radius: 50%; background: var(--success); }
+.reply-tag { font-size: 0.74rem; color: var(--signal); font-weight: 600; margin-top: 4px; display: block; }
+
+.form-card {
+  background: var(--white); border: 1.5px solid var(--steel);
+  border-radius: 20px; padding: 40px;
+  box-shadow: var(--shadow-card);
+  position: relative; overflow: hidden;
+}
+.form-card::before {
+  content: ""; position: absolute;
+  top: 0; left: 0; right: 0; height: 3px;
+  background: linear-gradient(90deg, var(--signal), var(--cyan));
+}
+.form-header { display: flex; align-items: center; gap: 12px; margin-bottom: 28px; }
+.form-header-icon { color: var(--signal); }
+.form-header h2 { font-size: 1.4rem; font-weight: 800; }
+.field { margin-bottom: 20px; display: flex; flex-direction: column; gap: 7px; }
+.field label { font-size: 0.86rem; font-weight: 700; color: var(--ink); }
+.field input, .field textarea, .field select {
+  border: 1.5px solid var(--steel-dark); border-radius: 10px;
+  padding: 13px 16px; font-family: var(--font-body);
+  font-size: 0.95rem; resize: vertical;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+  color: var(--ink); background: var(--white);
+  appearance: none;
+}
+.field input:focus, .field textarea:focus, .field select:focus {
+  outline: none; border-color: var(--signal-bright);
+  box-shadow: 0 0 0 3px var(--signal-glow);
+}
+.submit-btn { width: 100%; justify-content: center; font-size: 1rem; padding: 16px; margin-top: 8px; }
+
+.form-success {
+  text-align: center; padding: 48px 20px;
+  display: flex; flex-direction: column; align-items: center; gap: 16px;
+  animation: successFadeScale 0.3s ease both;
+}
+.success-icon { color: var(--success); animation: pop 0.4s ease; }
+@keyframes pop { 0% { transform: scale(0); } 70% { transform: scale(1.15); } 100% { transform: scale(1); } }
+.form-success h2 { font-size: 1.5rem; font-weight: 800; }
+.form-success p { color: var(--muted); max-width: 360px; line-height: 1.65; }
+
+@media (max-width: 860px) {
+  .support-layout { grid-template-columns: 1fr; }
+  .form-card { padding: 28px; }
+}
