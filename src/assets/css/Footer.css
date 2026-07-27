@@ -1,0 +1,53 @@
+.footer {
+  background: var(--ink);
+  margin-top: 80px;
+}
+.footer-top { padding: 64px 0 48px; }
+.footer-grid {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr 1fr;
+  gap: 40px;
+  padding-bottom: 48px;
+  border-bottom: 1px solid rgba(255,255,255,0.08);
+}
+.footer-brand .brand {
+  display: flex; align-items: center; gap: 10px;
+  font-family: var(--font-display); font-weight: 800;
+  font-size: 1.25rem; color: var(--white);
+  letter-spacing: -0.03em; margin-bottom: 16px;
+}
+.footer-brand .brand-mark {
+  width: 34px; height: 34px; border-radius: 9px;
+  background: linear-gradient(135deg, var(--signal), var(--cyan));
+  display: flex; align-items: center; justify-content: center;
+  color: white;
+}
+.footer-brand .brand-name {
+  background: linear-gradient(135deg, white, rgba(255,255,255,0.7));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+.footer-tagline { font-size: 0.88rem; color: rgba(255,255,255,0.45); max-width: 320px; line-height: 1.65; margin-bottom: 24px; }
+.footer-contact { list-style: none; display: flex; flex-direction: column; gap: 11px; }
+.footer-contact li { display: flex; align-items: flex-start; gap: 10px; font-size: 0.86rem; color: rgba(255,255,255,0.6); }
+.footer-contact svg { flex-shrink: 0; margin-top: 2px; color: var(--cyan); }
+.footer-contact a { color: rgba(255,255,255,0.75); transition: color 0.15s; }
+.footer-contact a:hover { color: var(--signal-bright); }
+
+.footer-col h4 { color: rgba(255,255,255,0.4); font-size: 0.72rem; text-transform: uppercase; letter-spacing: 0.1em; margin-bottom: 20px; font-weight: 600; }
+.footer-col ul { list-style: none; display: flex; flex-direction: column; gap: 12px; }
+.footer-col a { color: rgba(255,255,255,0.6); font-size: 0.88rem; transition: color 0.15s ease; }
+.footer-col a:hover { color: var(--signal-bright); }
+
+.footer-bottom { text-align: center; background: rgba(0,0,0,0.25); padding: 20px 0; }
+.footer-bottom-inner { display: flex; flex-direction: column; gap: 8px; }
+.footer-bottom p { font-size: 0.78rem; color: rgba(255,255,255,0.35); }
+
+@media (max-width: 860px) {
+  .footer-grid { grid-template-columns: 1fr 1fr; }
+  .footer-brand { grid-column: 1 / -1; }
+}
+@media (max-width: 540px) {
+  .footer-grid { grid-template-columns: 1fr; }
+}
