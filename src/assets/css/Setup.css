@@ -1,0 +1,378 @@
+/* SETUP HERO */
+.setup-hero {
+  position: relative;
+  padding: 88px 0 76px;
+  background: linear-gradient(160deg, #0b1f4a 0%, #122a5c 55%, #0b1f4a 100%);
+  overflow: hidden;
+}
+
+.setup-hero-inner {
+  position: relative;
+  z-index: 1;
+}
+
+.setup-hero-content {
+  max-width: 760px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.setup-hero-title {
+  font-size: clamp(2rem, 4.2vw, 3.1rem);
+  font-weight: 800;
+  line-height: 1.15;
+  color: var(--white);
+  letter-spacing: -0.02em;
+}
+
+.setup-hero .hero-title-accent {
+  background: linear-gradient(135deg, var(--signal-bright), var(--cyan));
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.setup-hero-sub {
+  font-size: 1.05rem;
+  color: rgba(255, 255, 255, 0.72);
+  max-width: 600px;
+  line-height: 1.7;
+  margin: 18px auto 0;
+}
+
+.setup-hero-actions {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 14px;
+  margin-top: 32px;
+}
+
+.setup-hero-actions .btn-secondary {
+  background: rgba(255, 255, 255, 0.96);
+}
+
+/* SECTION TITLE (CENTERED VARIANT) */
+.section-title.centered {
+  text-align: center;
+  font-size: clamp(1.6rem, 3vw, 2.2rem);
+  font-weight: 800;
+  position: relative;
+  margin: 0 auto 48px;
+  padding-bottom: 16px;
+  width: fit-content;
+}
+
+.section-title.centered::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 60px;
+  height: 3px;
+  border-radius: 3px;
+  background: linear-gradient(135deg, var(--signal), var(--signal-bright));
+}
+
+/* PRINTER CATEGORIES */
+.category-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 24px;
+}
+
+.category-card {
+  background: var(--white);
+  border: 1.5px solid var(--steel);
+  border-radius: var(--radius);
+  padding: 18px;
+  box-shadow: var(--shadow-card);
+  transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
+}
+
+.category-card:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--shadow-card-hover);
+  border-color: var(--signal-bright);
+}
+
+.category-img-wrap {
+  width: 100%;
+  height: 150px;
+  border-radius: var(--radius-sm);
+  overflow: hidden;
+  background: var(--steel);
+  margin-bottom: 16px;
+}
+
+.category-img-wrap img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.category-card h3 {
+  font-size: 1.05rem;
+  font-weight: 700;
+  margin-bottom: 8px;
+  color: var(--ink);
+}
+
+.category-card p {
+  font-size: 0.88rem;
+  color: var(--muted);
+  line-height: 1.6;
+}
+
+/* FEATURED PRINTERS / PRODUCTS */
+.featured-section {
+  background: var(--paper);
+}
+
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+
+.product-card {
+  background: var(--white);
+  border: 1.5px solid var(--steel);
+  border-radius: var(--radius);
+  overflow: hidden;
+  box-shadow: var(--shadow-card);
+  transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
+  display: flex;
+  flex-direction: column;
+}
+
+.product-card:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--shadow-card-hover);
+  border-color: var(--signal-bright);
+}
+
+.product-img-wrap {
+  width: 100%;
+  height: 190px;
+  background: var(--steel);
+  overflow: hidden;
+}
+
+.product-img-wrap img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.product-body {
+  padding: 20px 22px 24px;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+.product-body h3 {
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: var(--ink);
+  margin-bottom: 8px;
+}
+
+.product-body p {
+  font-size: 0.87rem;
+  color: var(--muted);
+  line-height: 1.6;
+  flex: 1;
+}
+
+.product-price {
+  font-family: var(--font-display);
+  font-size: 1.3rem;
+  font-weight: 800;
+  color: var(--gold);
+  margin: 14px 0 16px;
+}
+
+.add-cart-btn {
+  width: 100%;
+  justify-content: center;
+  padding: 12px 20px;
+  font-size: 0.88rem;
+}
+
+/* OUR SERVICES */
+.service-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+
+.service-card {
+  background: var(--white);
+  border: 1.5px solid var(--steel);
+  border-radius: var(--radius);
+  overflow: hidden;
+  box-shadow: var(--shadow-card);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.service-card:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--shadow-card-hover);
+}
+
+.service-icon-band {
+  background: linear-gradient(135deg, var(--signal) 0%, var(--signal-bright) 100%);
+  color: var(--white);
+  height: 84px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.service-card-body {
+  padding: 22px 24px 26px;
+}
+
+.service-card-body h3 {
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: var(--ink);
+  margin-bottom: 8px;
+}
+
+.service-card-body p {
+  font-size: 0.88rem;
+  color: var(--muted);
+  line-height: 1.65;
+}
+
+/* APPOINTMENT FORM */
+.appointment-section {
+  background: var(--paper);
+}
+
+.appointment-form-card {
+  max-width: 640px;
+  margin: 0 auto;
+  background: var(--white);
+  border: 1.5px solid var(--steel);
+  border-radius: var(--radius);
+  padding: 40px 44px;
+  box-shadow: var(--shadow-card);
+}
+
+.appointment-form-card .field {
+  margin-bottom: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.appointment-form-card label {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--ink);
+}
+
+.appointment-form-card input,
+.appointment-form-card textarea {
+  width: 100%;
+  padding: 13px 16px;
+  border: 1.5px solid var(--steel-dark);
+  border-radius: var(--radius-sm);
+  font-family: var(--font-body);
+  font-size: 0.95rem;
+  color: var(--ink);
+  background: var(--white);
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+  resize: vertical;
+}
+
+.appointment-form-card input:focus,
+.appointment-form-card textarea:focus {
+  outline: none;
+  border-color: var(--signal-bright);
+  box-shadow: 0 0 0 3px var(--signal-glow);
+}
+
+.appointment-form-card .submit-btn {
+  width: 100%;
+  justify-content: center;
+  padding: 15px 28px;
+  font-size: 1rem;
+  margin-top: 6px;
+}
+
+.appointment-form-card .form-success {
+  text-align: center;
+  padding: 16px 0;
+}
+
+.appointment-form-card .success-icon {
+  color: var(--success);
+  display: flex;
+  justify-content: center;
+  margin-bottom: 16px;
+}
+
+.appointment-form-card .form-success h2 {
+  font-size: 1.4rem;
+  font-weight: 800;
+  margin-bottom: 10px;
+}
+
+.appointment-form-card .form-success p {
+  color: var(--muted);
+  margin-bottom: 22px;
+  line-height: 1.6;
+}
+
+/* shared from Home - referenced here */
+.eyebrow-light {
+  color: rgba(255, 255, 255, 0.55);
+}
+
+.section-title.light {
+  color: var(--white);
+}
+
+/* RESPONSIVE */
+@media (max-width: 980px) {
+  .category-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .product-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .service-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 640px) {
+  .category-grid,
+  .product-grid,
+  .service-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .setup-hero {
+    padding: 64px 0 56px;
+  }
+
+  .setup-hero-actions {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .setup-hero-actions .btn {
+    justify-content: center;
+  }
+
+  .appointment-form-card {
+    padding: 28px 22px;
+  }
+}
